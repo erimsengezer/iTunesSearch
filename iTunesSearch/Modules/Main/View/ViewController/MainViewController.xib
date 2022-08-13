@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="iTunesSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="3N6-3D-P4G" id="HmH-Uw-Yz1"/>
+                <outlet property="searchTextField" destination="92P-nX-4XP" id="6AX-X0-TMy"/>
+                <outlet property="segmentedControl" destination="SIg-Mf-uhh" id="kU4-Ml-jav"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="92P-nX-4XP">
+                    <rect key="frame" x="20" y="44" width="374" height="40"/>
+                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="sIL-eT-NuQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-Mf-uhh">
+                    <rect key="frame" x="20" y="104" width="374" height="32"/>
+                    <segments>
+                        <segment title="Movies"/>
+                        <segment title="Music"/>
+                        <segment title="Apps"/>
+                        <segment title="Books"/>
+                    </segments>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3N6-3D-P4G">
+                    <rect key="frame" x="0.0" y="155" width="414" height="707"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="707" id="qrZ-7m-Swu"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JDg-X2-UH0">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3N6-3D-P4G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1xv-NZ-Gef"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="92P-nX-4XP" secondAttribute="trailing" constant="20" id="4mV-LF-Y8e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3N6-3D-P4G" secondAttribute="trailing" id="8eQ-ip-yG1"/>
+                <constraint firstItem="3N6-3D-P4G" firstAttribute="top" secondItem="SIg-Mf-uhh" secondAttribute="bottom" constant="20" id="HBw-h5-4b0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SIg-Mf-uhh" secondAttribute="trailing" constant="20" id="Ldw-bG-kOc"/>
+                <constraint firstItem="92P-nX-4XP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MT5-16-cNM"/>
+                <constraint firstItem="92P-nX-4XP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XUw-Cu-02R"/>
+                <constraint firstItem="SIg-Mf-uhh" firstAttribute="top" secondItem="92P-nX-4XP" secondAttribute="bottom" constant="20" id="YwX-gK-G5X"/>
+                <constraint firstItem="SIg-Mf-uhh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bH9-rf-Zmk"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
